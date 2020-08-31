@@ -2,9 +2,10 @@
   "name": "mantademo",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "payproc.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "test": "nodemon payproc.js",
+    "start": "node payproc.js"
   },
   "author": "Daniel Chen",
   "license": "MIT",
