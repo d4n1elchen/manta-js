@@ -77,11 +77,14 @@ function onPaymentRequests (session_id, crypto_currency) {
     const sess = sessions[session_id];
     const dest = destinations[sess.application_id];
     const payment_request = new PaymentRequestMessage({
-      merchant: "Vender Machine",
-      amount: dest.price,
+      merchant: {
+        name: "Vender Machine",
+        address: dest.applicationid,
+      },
+      amount: dest.price.toString(),
       fiat_currency: sess.request.fiat_currency,
       destinations: [{
-        amount: dest.price,
+        amount: dest.price.toString(),
         destination_address: dest.address,
         crypto_currency: "BLA",
       }]
