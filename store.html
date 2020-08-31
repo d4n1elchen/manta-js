@@ -23,7 +23,7 @@
         var session_id;
 
         // Create a client instance
-        client = new Paho.MQTT.Client("localhost", 1884, uuidv4());
+        client = new Paho.MQTT.Client("192.168.10.201", 1884, uuidv4());
 
         // set callback handlers
         client.onConnectionLost = onConnectionLost;
@@ -56,8 +56,10 @@
                         $("#qrcode").qrcode(payload.url);
                         $("#url").attr('href', payload.url);
                         $("#url").text(payload.url);
+                        break;
                     case "PAID":
                         alert("Success!");
+                        break;
                 }
             }
         }
