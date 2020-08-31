@@ -8,6 +8,7 @@ const { Console } = require('console');
  
 const config = yaml.safeLoad(fs.readFileSync('payproc_config.yaml', 'utf8'));
 const privateKey = fs.readFileSync(config.certificate.key);
+const certificate = fs.readFileSync(config.certificate.cert).toString();
 
 const mqtt_uri = config.mqtt_uri;
 const client   = mqtt.connect(`mqtt://${mqtt_uri}`);
@@ -25,7 +26,9 @@ var txid = 0;
 client.on('connect', function () {
   console.log(`Connected to ${mqtt_uri}`)
   client.subscribe('merchant_order_request/#');
-  client.subscribe('certificate');
+  client.publish('certificate', certificate, {
+    retain: true,
+  });
 });
  
 client.on('message', function (topic, message) {
@@ -70,7 +73,7 @@ function onMerchantOrderRequest (application_id, request) {
 }
 
 function onPaymentRequests (session_id, crypto_currency) {
-  if (session_id in sessions && (crypto_currency === "all" || crypto_currency in supported_crypto)) {
+  if (session_id in sessions && (crypto_currency === "all" || supported_crypto.includes(crypto_currency.toUpperCase()))) {
     const sess = sessions[session_id];
     const dest = destinations[sess.application_id];
     const payment_request = new PaymentRequestMessage({
@@ -106,7 +109,7 @@ function ack (session_id, message) {
 }
 
 function sign (message) {
-  const signer = crypto.createSign('RSA-SHA1');
+  const signer = crypto.createSign('RSA-SHA256');
   signer.update(message);
   signer.end();
   return signer.sign(privateKey).toString('base64');
