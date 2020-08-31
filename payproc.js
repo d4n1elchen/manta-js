@@ -4,6 +4,7 @@ const fs     = require('fs');
 const crypto = require('crypto');
 
 const { MerchantOrderRequestMessage, AckMessage, PaymentRequestMessage, PaymentRequestEnvelope, PaymentMessage } = require('./messages');
+const { Console } = require('console');
  
 const config = yaml.safeLoad(fs.readFileSync('payproc_config.yaml', 'utf8'));
 const privateKey = fs.readFileSync(config.certificate.key);
@@ -28,6 +29,7 @@ client.on('connect', function () {
 });
  
 client.on('message', function (topic, message) {
+  console.log("Message received! topic: " + topic)
   sp = topic.indexOf('/');
   const action = topic.slice(0,sp)
   const params = topic.slice(sp+1);
