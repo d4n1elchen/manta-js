@@ -1,9 +1,10 @@
-mqtt_uri: localhost
+mqtt_uri: 192.168.10.201
 certificate:
   cert: cert/cert.pem
   key: cert/key.pem
 supported_crypto:
-  - bla
+  - BLA
+  - NANO
 destinations:
   - title: 魔爪
     address: bla_aadf4a78a79a624f78189d092d6b0330b8d3ec98
