@@ -51,9 +51,14 @@
             console.log(message.destinationName);
             if (message.destinationName.startsWith('acks/')) {
                 payload = JSON.parse(message.payloadString);
-                $("#qrcode").qrcode(payload.url);
-                $("#url").attr('href', payload.url);
-                $("#url").text(payload.url);
+                switch (payload.status) {
+                    case "NEW":
+                        $("#qrcode").qrcode(payload.url);
+                        $("#url").attr('href', payload.url);
+                        $("#url").text(payload.url);
+                    case "PAID":
+                        alert("Success!");
+                }
             }
         }
 
