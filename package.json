@@ -1,0 +1,16 @@
+{
+  "name": "mantademo",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "author": "Daniel Chen",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^3.14.0",
+    "mqtt": "^4.2.1",
+    "node-rsa": "^1.1.1"
+  }
+}

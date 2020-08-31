@@ -1,0 +1,133 @@
+mqtt_uri: localhost
+certificate:
+  cert: cert/cert.pem
+  key: cert/key.pem
+supported_crypto:
+  - bla
+destinations:
+  - title: 魔爪
+    address: bla_aadf4a78a79a624f78189d092d6b0330b8d3ec98
+    price: 50
+    id: origin
+    applicationid: monster/origin
+  - title: 摩爪超越
+    address: bla_5bba580ccca90629f69c5790e19589af2a068a2a
+    price: 50
+    id: ultra
+    applicationid: monster/ultra
+  - title: 摩爪芒果
+    address: bla_17d63bfbe0eb38ca80ff2c75ecfe5a670339ab47
+    price: 50
+    id: mango
+    applicationid: monster/mango
+  - title: 日式綠茶
+    address: bla_12c7796585f82f1a6724a36c0ec5303ae9b8d146
+    price: 20
+    id: green_tea
+    applicationid: realleaf/green_tea
+  - title: 錫蘭紅茶
+    address: bla_bc03292db2712c6869203912d7994f1297e31c4e
+    price: 20
+    id: red_tea
+    applicationid: realleaf/red_tea
+  - title: 文山包種
+    address: bla_07300e6ccb205aeb2bc958f897a4385a3ac8346e
+    price: 20
+    id: wenshan_baozhong
+    applicationid: realleaf/wenshan_baozhong
+    undefined: realleaf/realleaf/wenshan_baozhong
+  - title: 木柵鐵觀音
+    address: bla_d95db913dc5e110eb47cd7d29a15d58ceb4dd14e
+    price: 20
+    id: mucha_iron_goddess
+    applicationid: realleaf/mucha_iron_goddess
+  - title: 御茶玉露
+    address: bla_b2be4693af939059008bf51e9bb0cf98c0b97e01
+    price: 20
+    id: gyokuro
+    applicationid: realleaf/gyokuro
+  - title: 烏龍茶
+    address: bla_7fa7131b17ebda9346aa3d5c0b4f6a0c1b280a9c
+    price: 20
+    id: oolong
+    applicationid: realleaf/oolong
+  - title: 可口可樂
+    address: bla_edbb859c58797cf099e110211cea8ec50c2cfd6d
+    price: 10
+    id: coke
+    applicationid: glass/coke
+  - title: 雪碧
+    address: bla_2ac2c59242b2854f157aa4d8dd4a5e1eab40c34c
+    price: 10
+    id: sprite
+    applicationid: glass/sprite
+  - title: 芬達
+    address: bla_1b56d6181da25d6bd804ec440fe9bf029a5ba0ec
+    price: 10
+    id: fanta
+    applicationid: glass/fanta
+  - title: 美粒果(柳橙口味)
+    address: bla_dd63117b7c0b7e30b6773b64925db122c0f7c044
+    price: 10
+    id: minute_maid_orange
+    applicationid: glass/minute_maid_orange
+  - title: 美粒果(蘋果口味)
+    address: bla_36ef69ab09bcb78e95edd1311168ec5abca98314
+    price: 10
+    id: minute_maid_apple
+    applicationid: glass/minute_maid_apple
+  - title: 舒味思氣泡水
+    address: bla_2fc7644aff56c8ec2f126046cc860ee82e5e4a13
+    price: 26
+    id: sprkling_water
+    applicationid: schweeps/sprkling_water
+  - title: 可口可樂
+    address: bla_004ae62b09b1dd9f87c9bc6b29e1bee35b0b4c18
+    price: 15
+    id: coke
+    applicationid: can/coke
+  - title: 可口可樂zero
+    address: bla_63078548bd28f530091480e76af34874ba21d1de
+    price: 15
+    id: coke_zero
+    applicationid: can/coke_zero
+  - title: 可口可樂纖維+
+    address: bla_e01ab53dfe727ce4d80e9bec79824166eb317f6b
+    price: 15
+    id: coke_fiber
+    applicationid: can/coke_fiber
+  - title: 雪碧纖維+
+    address: bla_15e1436febfbaf453dd67a985a238140b1c6504c
+    price: 15
+    id: sprite_fiber
+    applicationid: can/sprite_fiber
+  - title: 雪碧
+    address: bla_285122733739660a6964d9350312a2c0ebd6b958
+    price: 15
+    id: sprite
+    applicationid: can/sprite
+  - title: 芬達
+    address: bla_d42131c1f98b371c1851aef90ba4896c447ffa8b
+    price: 15
+    id: fanta
+    applicationid: can/fanta
+  - title: 美粒果(蘋果口味)
+    address: bla_543470cd0c73128c1e697ee6296feeeced8be23c
+    price: 15
+    id: minute_maid_apple
+    applicationid: can/minute_maid_apple
+  - title: 美粒果Qoo(蘋果口味)
+    address: bla_b5ed837f8d106dd3042ceb4b167345704d4e4d04
+    price: 15
+    id: qoo_apple
+    applicationid: can/qoo_apple
+  - title: 美粒果Qoo(柳橙口味)
+    address: bla_153966436951c0bccfec728086bd856043907047
+    price: 15
+    id: qoo_orange
+    applicationid: can/qoo_orange
+  - title: 紅茶花傳
+    address: bla_5a6b76c6f853eb6bce72d44be816d0507af4bece
+    price: 21
+    id: red_tea
+    applicationid: kochakaden/red_tea    
