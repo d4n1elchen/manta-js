@@ -2,6 +2,7 @@ mqtt_uri: 192.168.10.201
 certificate:
   cert: cert/cert.pem
   key: cert/key.pem
+merchant_name: BiiLabs 小舖
 supported_crypto:
   - BLA
   - NANO
@@ -132,3 +133,8 @@ destinations:
     price: 21
     id: red_tea
     applicationid: kochakaden/red_tea    
+  - title: 測試
+    address: bla_326bbedb0d9fe4e70c27d4b0c041c6e5d05ce1b0
+    price: 1
+    id: test
+    applicationid: test

@@ -18,6 +18,8 @@ for (let dest of config.destinations) {
   destinations[dest.applicationid] = dest;
 }
 
+const merchant_name = config.merchant_name;
+
 const supported_crypto = config.supported_crypto;
 
 var sessions = {};
@@ -78,8 +80,8 @@ function onPaymentRequests (session_id, crypto_currency) {
     const dest = destinations[sess.application_id];
     const payment_request = new PaymentRequestMessage({
       merchant: {
-        name: "Vender Machine",
-        address: dest.applicationid,
+        name: merchant_name,
+        address: dest.title,
       },
       amount: dest.price.toString(),
       fiat_currency: sess.request.fiat_currency,
